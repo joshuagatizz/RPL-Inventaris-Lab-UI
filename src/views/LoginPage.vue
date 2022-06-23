@@ -2,13 +2,14 @@
 import axios from "axios";
 import {useStore} from "../stores/User.js";
 import {onMounted, ref} from "vue";
+import router from "../router";
 
 const store = useStore();
 
 onMounted(() => {
     const store = useStore();
     console.log(store.token);
-    if (store.isLoggedIn) {
+    if (store.token !== '') {
         router.push('/dashboard');
     }
 })
@@ -26,12 +27,11 @@ function handleLogin() {
         }
     })
         .then((res) => {
-            console.log(res.data.data.token);
             store.setToken(res.data.data.token);
-            console.log(store.token);
+            router.push("/");
         })
         .catch((err) => {
-            console.log(err);
+            console.error(err);
         });
 }
 
