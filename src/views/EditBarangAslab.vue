@@ -54,6 +54,14 @@ onMounted(() => {
     store.setPageTitle('EditBarang');
 })
 
+function editBarang(data) {
+    store.setModalEditBarang(true);
+    store.setIdBarang(data.id);
+    store.setDeskripsiBarang(data.deskripsi);
+    store.setUrlBarang(data.urlFoto);
+    store.setNamaBarang(data.nama);
+}
+
 </script>
 
 <template>
@@ -102,7 +110,7 @@ onMounted(() => {
                                     fill="white"/>
                             </svg>
                         </a>
-                        <a @click="store.showModalEditBarang=!store.showModalEditBarang" href="#!" class="ml-3" data-modal-toggle="edit-modal">
+                        <a @click="editBarang(data)" href="#!" class="ml-3" data-modal-toggle="edit-modal">
                             <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="59" height="59" rx="20" fill="#66ACFF"/>
                                 <path
