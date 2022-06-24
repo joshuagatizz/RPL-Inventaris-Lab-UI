@@ -3,55 +3,55 @@
 @tailwind utilities;
 
 .sidenavbar {
-    @apply w-sidenavw h-screen shadow-md bg-black;
+  @apply w-sidenavw h-screen shadow-md bg-black;
 }
 
 .button-sidenavbar {
-    @apply flex items-center text-20px py-4 px-6 h-12 hover:text-white rounded transition duration-300 ease-in-out font-Default;
+  @apply flex items-center text-20px py-4 px-6 h-12 hover:text-white rounded transition duration-300 ease-in-out font-Default;
 }
 
 .content {
-    @apply w-contentw h-full p-4 m-10 overflow-y-auto;
+  @apply w-contentw h-full p-4 m-10 overflow-y-auto;
 }
 
-.title-content{
-    @apply font-Default font-semibold text-40px;
+.title-content {
+  @apply font-Default font-semibold text-40px;
 }
 
-.card{
-    @apply flex p-6 rounded-radiuscard shadow-lg bg-white w-cardw h-cardh items-center hover:bg-slate-50;
+.card {
+  @apply flex p-6 rounded-radiuscard shadow-lg bg-white w-cardw h-cardh items-center hover:bg-slate-50;
 }
 
-.title-card{
-    @apply text-20px font-semibold;
+.title-card {
+  @apply text-20px font-semibold;
 }
 
-.description-card{
-    @apply text-16px;
-}
-/* aa */
-.item-image{
-    @apply rounded-[20px] h-[83px] w-[83x];
+.description-card {
+  @apply text-16px;
 }
 
-.card-edit-barang{
-    @apply flex p-6 rounded-radiuscard shadow-lg bg-white w-cardw h-cardh items-center;
+.item-image {
+  @apply rounded-[20px] h-[83px] w-[83x];
 }
 
-.popup-title{
-    @apply text-40px;
+.card-edit-barang {
+  @apply flex p-6 rounded-radiuscard shadow-lg bg-white w-cardw h-cardh items-center;
 }
 
-.edit-popup-image{
-    @apply rounded-[20px] h-[230px] w-[230];
+.popup-title {
+  @apply text-40px;
 }
 
-.btn-konfirm{
-    @apply border-solid font-Default text-20px font-semibold h-btnlaporanh;
+.edit-popup-image {
+  @apply rounded-[20px] h-[230px] w-[230];
 }
 
-.modal-success{
-    @apply relative w-modalkonfirmw h-modalkonfirmh mx-auto mt-28 bg-bgsuccess rounded-radius20;
+.btn-konfirm {
+  @apply border-solid font-Default text-20px font-semibold h-btnlaporanh;
+}
+
+.modal-success {
+  @apply relative w-modalkonfirmw h-modalkonfirmh mx-auto mt-28 bg-bgsuccess rounded-radius20;
 }
 
 .modal-teakun{
@@ -63,3 +63,14 @@
 }
 
 
+.modal-konfirm {
+  @apply relative w-modalkonfirmw h-modalkonfirmh mx-auto mt-28 bg-white rounded-radius20;
+}
+
+.modal-teakun {
+  @apply relative w-modalakunw h-modalakunh mx-auto mt-28 bg-white rounded-radius20;
+}
+
+.btn {
+  @apply border-solid font-Default text-20px font-semibold w-btnlaporanw h-btnlaporanh rounded-radius20;
+}

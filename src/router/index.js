@@ -7,6 +7,7 @@ import Pinjamanku from "../views/Pinjamanku.vue";
 import LaporanSanksi from "../views/LaporanSanksi.vue";
 import Berhasil from "../views/BerhasilPage.vue";
 
+import KelolaAkun from "../views/KelolaAkun.vue";
 
 const routes = [
     {
@@ -43,6 +44,11 @@ const routes = [
         path: '/berhasil',
         name: 'Berhasil page',
         component: Berhasil
+    },
+    {
+        path: '/kelola-akun-aslab',
+        name: 'Kelola Akun Aslab',
+        component: KelolaAkun
     }
 ];
 

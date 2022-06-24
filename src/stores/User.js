@@ -7,6 +7,9 @@ export const useStore = defineStore("User", () => {
     const user = ref('Unknown');
     const userId = ref('Unknown');
     const pageTitle = ref('dashboard');
+    const modalTambahAkun = ref(false);
+    const modalHapusAkun = ref(false);
+    const modalEditAkun = ref(false);
     const showModalPinjam = ref(false);
     const showModalEditBarang = ref(false);
     const showModalTambahBarang = ref(false);
@@ -45,9 +48,21 @@ export const useStore = defineStore("User", () => {
     const setPageTitle = (title) => {
         pageTitle.value = title;
     }
-    
+
     const setModalPinjam = (val) => {
         showModalPinjam.value = val;
+    }
+
+    const setModalTambahAkun = (show) => {
+        modalTambahAkun.value = show;
+    }
+
+    const setModalHapusAkun = (show) => {
+        modalHapusAkun.value = show;
+    }
+
+    const setModalEditAkun = (show) => {
+        modalEditAkun.value = show;
     }
 
     const setModalEditBarang = (val) => {
@@ -57,7 +72,7 @@ export const useStore = defineStore("User", () => {
     const setModalTambahBarang = (val) => {
         showModalTambahBarang.value = val;
     }
-    
+
     const setUserId = (id) => {
         userId.value = id;
     }
@@ -65,7 +80,8 @@ export const useStore = defineStore("User", () => {
     return {
         token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam,
         setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId,
-        idBarang, namaBarang, urlBarang, deskripsiBarang, setIdBarang, setNamaBarang, setUrlBarang, setDeskripsiBarang
+        idBarang, namaBarang, urlBarang, deskripsiBarang, setIdBarang, setNamaBarang, setUrlBarang, setDeskripsiBarang,
+        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, modalTambahAkun, setModalTambahAkun, modalHapusAkun, setModalHapusAkun, setModalEditAkun, modalEditAkun
     }
 }, {
     persist: true
