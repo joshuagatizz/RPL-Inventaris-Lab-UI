@@ -5,6 +5,7 @@ export const useStore = defineStore("User", () => {
     const token = ref('');
     const authority = ref('aslab');
     const user = ref('Unknown');
+    const userId = ref('Unknown');
     const pageTitle = ref('dashboard');
     const showModalPinjam = ref(false);
     const showModalEditBarang = ref(false);
@@ -25,7 +26,7 @@ export const useStore = defineStore("User", () => {
     const setPageTitle = (title) => {
         pageTitle.value = title;
     }
-
+    
     const setModalPinjam = (val) => {
         showModalPinjam.value = val;
     }
@@ -37,11 +38,14 @@ export const useStore = defineStore("User", () => {
     const setModalTambahBarang = (val) => {
         showModalTambahBarang.value = val;
     }
-
-    return {
-        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam, setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang
+    
+    const setUserId = (id) => {
+        userId.value = id;
     }
 
+    return {
+        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam, setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId
+    }
 }, {
     persist: true
 });
