@@ -4,6 +4,8 @@ import {useStore} from "../stores/User.js";
 import {onMounted, ref} from "vue";
 import router from "../router";
 import Navbar from "./components/Navbar.vue";
+import EditBarangModal from "./components/EditBarangModal.vue";
+import TambahBarangModal from "./components/TambahBarangModal.vue";
 
 const store = useStore();
 
@@ -36,6 +38,11 @@ function handleLogin() {
 </script>
 
 <template>
+  <TambahBarangModal v-if="store.showModalTambahBarang"></TambahBarangModal>
+
+  <EditBarangModal v-if="store.showModalEditBarang"></EditBarangModal>
+
+
     <div class="flex">
         <Navbar></Navbar>
 
@@ -43,7 +50,7 @@ function handleLogin() {
         <div class="content">
             <div class="flex w-cardw">
                 <h1 class="title-content"> Edit Barang </h1>
-                <a href="#!" class="ml-auto" data-modal-toggle="add-modal">
+                <a @click="store.showModalTambahBarang=!store.showModalTambahBarang" href="#!" class="ml-auto" data-modal-toggle="add-modal">
                     <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="59" height="59" rx="20" fill="#05D834"/>
                         <path
@@ -72,7 +79,7 @@ function handleLogin() {
                                 fill="white"/>
                         </svg>
                     </a>
-                    <a href="#!" class="ml-3" data-modal-toggle="edit-modal">
+                    <a @click="store.showModalEditBarang=!store.showModalEditBarang" href="#!" class="ml-3" data-modal-toggle="edit-modal">
                         <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="59" height="59" rx="20" fill="#66ACFF"/>
                             <path
@@ -100,7 +107,7 @@ function handleLogin() {
                                 fill="white"/>
                         </svg>
                     </a>
-                    <a href="#!" class="ml-3" data-modal-toggle="edit-modal">
+                    <a @click="store.showModalEditBarang=!store.showModalEditBarang" href="#!" class="ml-3" data-modal-toggle="edit-modal">
                         <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="59" height="59" rx="20" fill="#66ACFF"/>
                             <path
@@ -127,7 +134,7 @@ function handleLogin() {
                                 fill="white"/>
                         </svg>
                     </a>
-                    <a href="#!" class="ml-3" data-modal-toggle="edit-modal">
+                    <a @click="store.showModalEditBarang=!store.showModalEditBarang" href="#!" class="ml-3" data-modal-toggle="edit-modal">
                         <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="59" height="59" rx="20" fill="#66ACFF"/>
                             <path
@@ -154,7 +161,7 @@ function handleLogin() {
                                 fill="white"/>
                         </svg>
                     </a>
-                    <a href="#!" class="ml-3" data-modal-toggle="edit-modal">
+                    <a @click="store.showModalEditBarang=!store.showModalEditBarang" href="#!" class="ml-3" data-modal-toggle="edit-modal">
                         <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="59" height="59" rx="20" fill="#66ACFF"/>
                             <path

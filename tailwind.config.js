@@ -19,11 +19,13 @@ module.exports = {
         'sidenavw':'22.4375rem',
         'contentw': '67.5625rem',
         'modalkonfirmw': '27.313rem',
+        'modalakunw': '32.813rem',
       },
       height: {
         'cardh': '9.3125rem',
         'modalkonfirmh': '24.063rem',
         'btnlaporanh': '3.125rem',
+        'modalakunh': '42.813rem',
       },
       colors: {
         'inactive': '#747474',
@@ -33,6 +35,7 @@ module.exports = {
         'radiuscard' : '1.25rem',
         'radius20' : '1.25rem',
       },
+
     },
   },
   plugins: [],
