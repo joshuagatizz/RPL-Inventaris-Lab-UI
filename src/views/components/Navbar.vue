@@ -9,7 +9,7 @@ onMounted(() => {
     store.setModalEditBarang(false);
     store.setModalPinjam(false);
     if (store.token === '') {
-        router.push("/login");
+        router.push("/");
     }
 });
 
@@ -17,7 +17,7 @@ const store = useStore();
 
 function toLogin() {
     store.forgetToken();
-    router.push("/login");
+    router.push("/");
 }
 
 function toHome() {

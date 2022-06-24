@@ -10,7 +10,7 @@ import Berhasil from "../views/BerhasilPage.vue";
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         name: 'Login Page',
         component: LoginPage
     },
