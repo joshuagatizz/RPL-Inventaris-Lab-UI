@@ -44,8 +44,6 @@ function toKelolaAkun() {
     router.push("/kelola-akun-aslab");
 }
 
-const store = useStore();
-
 </script>
 
 <template>

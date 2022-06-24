@@ -81,7 +81,7 @@ export const useStore = defineStore("User", () => {
         token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam,
         setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId,
         idBarang, namaBarang, urlBarang, deskripsiBarang, setIdBarang, setNamaBarang, setUrlBarang, setDeskripsiBarang,
-        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, modalTambahAkun, setModalTambahAkun, modalHapusAkun, setModalHapusAkun, setModalEditAkun, modalEditAkun
+        modalTambahAkun, setModalTambahAkun, modalHapusAkun, setModalHapusAkun, setModalEditAkun, modalEditAkun
     }
 }, {
     persist: true
