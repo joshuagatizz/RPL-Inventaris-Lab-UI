@@ -3,6 +3,9 @@ import {ref} from "vue";
 
 export const useStore = defineStore("User", () => {
     const token = ref('');
+    const authority = ref('aslab');
+    const user = ref('Unknown');
+    const pageTitle = ref('dashboard');
 
     const forgetToken = () => {
         token.value = '';
@@ -12,8 +15,16 @@ export const useStore = defineStore("User", () => {
         token.value = newToken;
     }
 
+    const setUser = (val) => {
+        user.value = val;
+    }
+
+    const setPageTitle = (title) => {
+        pageTitle.value = title;
+    }
+
     return {
-        token, forgetToken, setToken
+        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle
     }
 
 }, {

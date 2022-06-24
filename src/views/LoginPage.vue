@@ -28,6 +28,7 @@ function handleLogin() {
     })
         .then((res) => {
             store.setToken(res.data.data.token);
+            store.setUser(res.data.data.user.nama);
             router.push("/");
         })
         .catch((err) => {
