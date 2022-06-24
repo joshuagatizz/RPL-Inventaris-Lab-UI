@@ -5,6 +5,7 @@ export const useStore = defineStore("User", () => {
     const token = ref('');
     const authority = ref('aslab');
     const user = ref('Unknown');
+    const userId = ref('Unknown');
     const pageTitle = ref('dashboard');
 
     const forgetToken = () => {
@@ -23,8 +24,12 @@ export const useStore = defineStore("User", () => {
         pageTitle.value = title;
     }
 
+    const setUserId = (id) => {
+        userId.value = id;
+    }
+
     return {
-        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle
+        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, userId, setUserId
     }
 
 }, {

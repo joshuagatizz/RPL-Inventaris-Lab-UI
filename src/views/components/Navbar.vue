@@ -1,6 +1,21 @@
 <script setup>
 import router from "../../router";
 import {useStore} from "../../stores/User";
+import {onMounted} from "vue";
+
+onMounted(() => {
+    const store = useStore();
+    if (store.token === '') {
+        router.push("/login");
+    }
+});
+
+const store = useStore();
+
+function toLogin() {
+    store.forgetToken();
+    router.push("/login");
+}
 
 function toHome() {
     router.push("/dashboard");
@@ -21,8 +36,6 @@ function toLihatLaporan() {
 function toEditBarang() {
     router.push("/edit-barang-aslab");
 }
-
-const store = useStore();
 
 </script>
 
@@ -107,7 +120,7 @@ const store = useStore();
                     <span>Edit Barang</span>
                 </a>
             </li>
-            <li class="relative">
+            <li class="relative" @click="toLogin">
                 <a class="button-sidenavbar fixed w-1/5 bottom-10 text-inactive" href="#!">
                     <svg width="20" height="22" viewBox="0 0 20 22" class="mr-5" fill="currentColor"
                          xmlns="http://www.w3.org/2000/svg">
