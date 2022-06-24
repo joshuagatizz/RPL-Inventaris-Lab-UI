@@ -4,6 +4,7 @@ import Dashboard from "../views/Dashboard.vue";
 import EditBarangAslab from "../views/EditBarangAslab.vue";
 import LihatBarang from "../views/LihatBarang.vue";
 import Pinjamanku from "../views/Pinjamanku.vue";
+import LaporanSanksi from "../views/LaporanSanksi.vue";
 
 const routes = [
     {
@@ -26,11 +27,11 @@ const routes = [
         name: 'Pinjamanku',
         component: Pinjamanku
     },
-    // {
-    //     path: '/lihat-laporan',
-    //     name: 'Lihat Laporan',
-    //     component: LihatLaporan
-    // },
+    {
+        path: '/laporan-sanksi',
+        name: 'Laporan Sanksi',
+        component: LaporanSanksi
+    },
     {
         path: '/edit-barang-aslab',
         name: 'Edit Barang Aslab',

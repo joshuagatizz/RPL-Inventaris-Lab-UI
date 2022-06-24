@@ -14,8 +14,8 @@ function toPinjamanku() {
     router.push("/pinjamanku");
 }
 
-function toLihatLaporan() {
-    router.push("/lihat-laporan");
+function toLaporanSanksi() {
+    router.push("/laporan-sanksi");
 }
 
 function toEditBarang() {
@@ -85,14 +85,14 @@ const store = useStore();
                     <span>Pinjamanku</span>
                 </a>
             </li>
-            <li @click="toLihatLaporan" class="mt-4">
-                <a v-bind:class="{'text-white' : store.pageTitle === 'LihatLaporan', 'text-inactive' : store.pageTitle !== 'LihatLaporan'}" class="button-sidenavbar" href="#!">
+            <li @click="toLaporanSanksi" class="mt-4">
+                <a v-bind:class="{'text-white' : store.pageTitle === 'LaporanSanksi', 'text-inactive' : store.pageTitle !== 'LaporanSanksi'}" class="button-sidenavbar" href="#!">
                     <svg width="20" height="25" viewBox="0 0 20 25" class="mr-5" fill="currentColor"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.1875 2.12484e-08C17.9002 -8.75273e-05 18.5863 0.270369 19.1072 0.756712C19.6281 1.24305 19.945 1.90901 19.9938 2.62L20 2.8125V22.1875C20.0001 22.9002 19.7296 23.5863 19.2433 24.1072C18.7569 24.6281 18.091 24.945 17.38 24.9938L17.1875 25H2.8125C2.09984 25.0001 1.41372 24.7296 0.892808 24.2433C0.371893 23.7569 0.0550276 23.091 0.00625016 22.38L2.12484e-08 22.1875V2.8125C-8.75273e-05 2.09984 0.270369 1.41372 0.756711 0.892808C1.24305 0.371893 1.90901 0.0550276 2.62 0.00625016L2.8125 2.12484e-08H17.1875ZM5.63125 3.75625C5.13397 3.75625 4.65706 3.95379 4.30542 4.30542C3.95379 4.65706 3.75625 5.13397 3.75625 5.63125C3.75625 6.12853 3.95379 6.60544 4.30542 6.95708C4.65706 7.30871 5.13397 7.50625 5.63125 7.50625H14.3813C14.8785 7.50625 15.3554 7.30871 15.7071 6.95708C16.0587 6.60544 16.2562 6.12853 16.2562 5.63125C16.2562 5.13397 16.0587 4.65706 15.7071 4.30542C15.3554 3.95379 14.8785 3.75625 14.3813 3.75625H5.63125Z"/>
                     </svg>
-                    <span>Lihat Laporan</span>
+                    <span>Laporan Sanksi</span>
                 </a>
             </li>
             <li @click="toEditBarang" class="mt-4">
