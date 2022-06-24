@@ -5,6 +5,9 @@ import {onMounted} from "vue";
 
 onMounted(() => {
     const store = useStore();
+    store.setModalTambahBarang(false);
+    store.setModalEditBarang(false);
+    store.setModalPinjam(false);
     if (store.token === '') {
         router.push("/login");
     }

@@ -29,7 +29,6 @@ function getData() {
         .catch((err) => {
             if (pageNow.value <= 0)
                 pageNow.value++;
-            else pageNow.value--;
         });
 }
 
@@ -94,7 +93,7 @@ function formatNumber(number) {
                 <div v-for="(data, index) in listData" :data="data">
                     <div class="card-edit-barang mt-5" href="#!">
                         <img class="item-image flex-none"
-                             src="https://cdn.discordapp.com/attachments/976696861207433219/984030204844453888/Rectangle_3.jpg">
+                             :src=data.urlFoto>
                         <p class="font-Default ml-5">
                             <span class="title-card">{{ data.nama }}</span>
                             <br>

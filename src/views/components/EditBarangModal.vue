@@ -16,7 +16,7 @@ const store = useStore();
                  placeholder="Nama" required>
         </div>
         <div class="mb-2 mx-5 block">
-          <label for="deskripsi" class="block mb-2 text-16px text-black">Deskripsi:</label>
+          <label class="block mb-2 text-16px text-black">Deskripsi:</label>
           <textarea id="descBarang" rows="7" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 " placeholder="Edit deskripsi..." required></textarea>
         </div>
       </form>
