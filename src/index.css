@@ -54,3 +54,12 @@
     @apply relative w-modalkonfirmw h-modalkonfirmh mx-auto mt-28 bg-bgsuccess rounded-radius20;
 }
 
+.modal-teakun{
+    @apply relative w-[32.813rem] h-[42.813rem] mx-auto mt-28 bg-white rounded-radius20;
+}
+
+.btn{
+    @apply border-solid font-Default text-20px font-semibold w-[7.938rem] h-[3.125rem] rounded-radius20;
+}
+
+
