@@ -18,7 +18,8 @@ function getData() {
         url: "http://localhost:8080/api/barang",
         params: {
             token: store.token,
-            page: pageNow.value
+            page: pageNow.value,
+            filterPinjam: true
         }
     })
         .then((res) => {

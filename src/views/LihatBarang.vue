@@ -3,6 +3,7 @@ import axios from "axios";
 import {useStore} from "../stores/User.js";
 import {onMounted, ref, watch} from "vue";
 import Navbar from "./components/Navbar.vue";
+import PinjamModal from "./components/ConfirmPinjam.vue";
 
 const store = useStore();
 
@@ -40,10 +41,22 @@ onMounted(() => {
     store.setPageTitle('LihatBarang');
 })
 
+function pinjam(data) {
+    console.log(data);
+    store.setModalPinjam(true);
+    store.setIdBarang(data.id);
+    store.setDeskripsiBarang(data.deskripsi);
+    store.setUrlBarang(data.urlFoto);
+    store.setNamaBarang(data.nama);
+}
+
 
 </script>
 
 <template>
+
+    <PinjamModal v-if="store.showModalPinjam"></PinjamModal>
+
     <!-- Sidenavbar Start -->
     <div class="flex" style="font-family:monospace">
         <Navbar></Navbar>
@@ -65,7 +78,7 @@ onMounted(() => {
                             <span class="description-card">{{ data.deskripsi }}</span>
                         </p>
 
-                        <button data-modal-toggle="pinjam-modal" type="submit"
+                        <button @click="pinjam(data)"
                                 class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[15px] text-sm inline-flex items-center px-14 py-3.5 text-center ml-auto">
                             Pinjam
                         </button>

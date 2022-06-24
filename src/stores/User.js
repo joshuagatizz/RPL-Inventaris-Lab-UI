@@ -11,6 +11,25 @@ export const useStore = defineStore("User", () => {
     const showModalEditBarang = ref(false);
     const showModalTambahBarang = ref(false);
 
+    const idBarang = ref('');
+    const deskripsiBarang = ref('');
+    const urlBarang = ref('');
+    const namaBarang = ref('');
+
+    const setIdBarang = (val) => {
+        idBarang.value = val;
+    }
+
+    const setDeskripsiBarang = (val) => {
+        deskripsiBarang.value = val;
+    }
+    const setUrlBarang = (val) => {
+        urlBarang.value = val;
+    }
+    const setNamaBarang = (val) => {
+        namaBarang.value = val;
+    }
+
     const forgetToken = () => {
         token.value = '';
     }
@@ -44,7 +63,9 @@ export const useStore = defineStore("User", () => {
     }
 
     return {
-        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam, setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId
+        token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam,
+        setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId,
+        idBarang, namaBarang, urlBarang, deskripsiBarang, setIdBarang, setNamaBarang, setUrlBarang, setDeskripsiBarang
     }
 }, {
     persist: true
