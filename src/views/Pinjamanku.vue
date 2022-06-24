@@ -161,7 +161,6 @@ onMounted(() => {
                                 fill="black"/>
                         </svg>
                     </a>
-
                 </div>
 
             </div>

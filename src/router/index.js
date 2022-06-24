@@ -5,6 +5,9 @@ import EditBarangAslab from "../views/EditBarangAslab.vue";
 import LihatBarang from "../views/LihatBarang.vue";
 import Pinjamanku from "../views/Pinjamanku.vue";
 import LaporanSanksi from "../views/LaporanSanksi.vue";
+import LaporanBersama from "../views/LaporanBersama.vue";
+import SanksiBersama from "../views/SanksiBersama.vue";
+import PinjamankuBersama from "../views/PinjamankuBersama.vue";
 
 const routes = [
     {
@@ -36,6 +39,21 @@ const routes = [
         path: '/edit-barang-aslab',
         name: 'Edit Barang Aslab',
         component: EditBarangAslab
+    },
+    {
+        path: '/laporan-bersama',
+        name: 'Laporan Bersama',
+        component: LaporanBersama
+    },
+    {
+        path: '/sanksi-bersama',
+        name: 'Sanksi Bersama',
+        component: SanksiBersama
+    },
+    {
+        path: '/pinjamanku-bersama',
+        name: 'Pinjamanku Bersama',
+        component: PinjamankuBersama
     }
 ];
 
