@@ -27,6 +27,10 @@ function toLihatLaporan() {
 function toEditBarang() {
     router.push("/edit-barang-aslab");
 }
+
+function toKelolaAkun() {
+    router.push("/kelola-akun-aslab");
+}
 </script>
 
 <template>
@@ -109,6 +113,27 @@ function toEditBarang() {
                         </p>
                     </div>
                 </a>
+
+                <a @click="toKelolaAkun" href="#!">
+                    <div class="card mt-5">
+                        <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="83" height="83" rx="20" fill="#FFE7DF" />
+                            <path
+                                d="M41 17C27.2 17 16 28.2 16 42C16 55.8 27.2 67 41 67C54.8 67 66 55.8 66 42C66 28.2 54.8 17 41 17ZM41 27C45.825 27 49.75 30.925 49.75 35.75C49.75 40.575 45.825 44.5 41 44.5C36.175 44.5 32.25 40.575 32.25 35.75C32.25 30.925 36.175 27 41 27ZM41 62C35.925 62 29.925 59.95 25.65 54.8C30.029 51.3643 35.4341 49.497 41 49.497C46.5659 49.497 51.971 51.3643 56.35 54.8C52.075 59.95 46.075 62 41 62Z"
+                                fill="black" />
+                        </svg>
+
+                        <p class="font-Default ml-5">
+                            <span class="title-card">Kelola Akun</span>
+                            <br>
+                            <span class="description-card">Mengelola data akun setiap user</span>
+                        </p>
+                    </div>
+                </a>
+
+
+
+                
             </div>
             <!-- Card End -->
         </div>

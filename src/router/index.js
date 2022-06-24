@@ -4,6 +4,7 @@ import Dashboard from "../views/Dashboard.vue";
 import EditBarangAslab from "../views/EditBarangAslab.vue";
 import LihatBarang from "../views/LihatBarang.vue";
 import Pinjamanku from "../views/Pinjamanku.vue";
+import KelolaAkun from "../views/KelolaAkun.vue";
 
 const routes = [
     {
@@ -35,6 +36,11 @@ const routes = [
         path: '/edit-barang-aslab',
         name: 'Edit Barang Aslab',
         component: EditBarangAslab
+    },
+    {
+        path: '/kelola-akun-aslab',
+        name: 'Kelola Akun Aslab',
+        component: KelolaAkun
     }
 ];
 
