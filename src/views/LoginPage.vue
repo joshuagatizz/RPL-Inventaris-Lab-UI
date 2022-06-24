@@ -8,7 +8,6 @@ const store = useStore();
 
 onMounted(() => {
     const store = useStore();
-    console.log(store.token);
     if (store.token !== '') {
         router.push('/dashboard');
     }
@@ -29,7 +28,8 @@ function handleLogin() {
         .then((res) => {
             store.setToken(res.data.data.token);
             store.setUser(res.data.data.user.nama);
-            router.push("/");
+            store.setUserId(res.data.data.user.id);
+            router.push("/dashboard");
         })
         .catch((err) => {
             console.error(err);
