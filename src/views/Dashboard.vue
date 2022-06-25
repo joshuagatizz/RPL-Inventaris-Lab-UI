@@ -97,7 +97,7 @@ function toKelolaAkun() {
                     </div>
                 </a>
 
-                <a @click="toEditBarang" href="#!">
+                <a v-if="store.authority === 1" @click="toEditBarang" href="#!">
                     <div class="card mt-5">
                         <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="83" height="83" rx="20" fill="#FFE7DF"/>
@@ -114,7 +114,7 @@ function toKelolaAkun() {
                     </div>
                 </a>
 
-                <a @click="toKelolaAkun" href="#!">
+                <a v-if="store.authority === 1" @click="toKelolaAkun" href="#!">
                     <div class="card mt-5">
                         <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="83" height="83" rx="20" fill="#FFE7DF" />
