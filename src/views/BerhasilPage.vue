@@ -15,9 +15,15 @@
 
 <script setup>
 import router from "../router";
+import {useStore} from "../stores/User";
 
 function back() {
-    router.push('/edit-barang-aslab')
+    const store = useStore();
+    if (store.pageTitle === 'KelolaAkun') {
+        router.push('/kelola-akun-aslab')
+    } else {
+        router.push('/edit-barang-aslab')
+    }
 }
 
 </script>

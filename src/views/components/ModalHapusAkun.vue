@@ -1,7 +1,25 @@
 <script setup>
 import { useStore } from "../../stores/User.js";
+import axios from "axios";
+import router from "../../router";
 
 const store = useStore();
+
+function hapus() {
+    axios({
+        method: "delete",
+        url: "http://localhost:8080/api/user/" + store.idUser,
+        params: {
+            token: store.token
+        }
+    })
+        .then((res) => {
+            if (store.userId === store.idUser) {
+                store.forgetToken();
+            }
+            router.push("/berhasil");
+        });
+}
 
 </script>
 
@@ -30,7 +48,7 @@ const store = useStore();
             <div class="absolute flex bottom-0 w-full">
                 <button @click="store.setModalHapusAkun(false)"
                     class="btn-konfirm w-1/2 rounded-bl-radius20 text-black bg-buttongrey hover:bg-slate-200">Batal</button>
-                <button id="btn-konfirmhapus"
+                <button @click="hapus" id="btn-konfirmhapus"
                     class="btn-konfirm w-1/2 rounded-br-radius20 text-white bg-buttonred hover:bg-red-600">Hapus</button>
             </div>
         </div>

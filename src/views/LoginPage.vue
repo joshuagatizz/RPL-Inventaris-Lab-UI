@@ -29,6 +29,7 @@ function handleLogin() {
             store.setToken(res.data.data.token);
             store.setUser(res.data.data.user.nama);
             store.setUserId(res.data.data.user.id);
+            store.setAuthority(res.data.data.access);
             router.push("/dashboard");
         })
         .catch((err) => {

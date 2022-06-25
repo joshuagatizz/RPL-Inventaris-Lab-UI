@@ -8,6 +8,10 @@ onMounted(() => {
     store.setModalTambahBarang(false);
     store.setModalEditBarang(false);
     store.setModalPinjam(false);
+    store.setModalTambahAkun(false);
+    store.setModalHapusAkun(false);
+    store.setModalEditAkun(false);
+
     if (store.token === '') {
         router.push("/");
     }
@@ -115,7 +119,7 @@ function toKelolaAkun() {
                     <span>Laporan Sanksi</span>
                 </a>
             </li>
-            <li @click="toEditBarang" class="mt-4">
+            <li v-if="store.authority === 1" @click="toEditBarang" class="mt-4">
                 <a v-bind:class="{'text-white' : store.pageTitle === 'EditBarang', 'text-inactive' : store.pageTitle !== 'EditBarang'}" class="button-sidenavbar" href="#!">
                     <svg width="20" height="20" viewBox="0 0 20 20" class="mr-5" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +131,7 @@ function toKelolaAkun() {
                     <span>Edit Barang</span>
                 </a>
             </li>
-            <li @click="toKelolaAkun" class="mt-4">
+            <li v-if="store.authority === 1" @click="toKelolaAkun" class="mt-4">
                 <a v-bind:class="{'text-white' : store.pageTitle === 'KelolaAkun', 'text-inactive' : store.pageTitle !== 'KelolaAkun'}" class="button-sidenavbar" href="#!">
                     <svg width="25" height="25" viewBox="0 0 25 25" class="mr-5" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">

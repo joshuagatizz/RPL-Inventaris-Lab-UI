@@ -3,7 +3,7 @@ import {ref} from "vue";
 
 export const useStore = defineStore("User", () => {
     const token = ref('');
-    const authority = ref('aslab');
+    const authority = ref('');
     const user = ref('Unknown');
     const userId = ref('Unknown');
     const pageTitle = ref('dashboard');
@@ -18,6 +18,41 @@ export const useStore = defineStore("User", () => {
     const deskripsiBarang = ref('');
     const urlBarang = ref('');
     const namaBarang = ref('');
+
+    const nama = ref('');
+    const nim = ref('');
+    const role = ref('');
+    const email = ref('');
+    const password = ref('');
+    const urlFoto = ref('');
+    const idUser = ref('');
+
+    const setAuthority = (val) => {
+        authority.value = val;
+    }
+
+    const setIdUser = (val) => {
+        idUser.value = val;
+    }
+
+    const setNama = (val) => {
+        nama.value = val;
+    }
+    const setNim = (val) => {
+        nim.value = val;
+    }
+    const setRole = (val) => {
+        role.value = val;
+    }
+    const setEmail = (val) => {
+        email.value = val;
+    }
+    const setPassword = (val) => {
+        password.value = val;
+    }
+    const setUrlFoto = (val) => {
+        urlFoto.value = val;
+    }
 
     const setIdBarang = (val) => {
         idBarang.value = val;
@@ -81,7 +116,9 @@ export const useStore = defineStore("User", () => {
         token, user, forgetToken, setToken, authority, setUser, pageTitle, setPageTitle, showModalPinjam,
         setModalPinjam, showModalEditBarang, setModalEditBarang, showModalTambahBarang, setModalTambahBarang, userId, setUserId,
         idBarang, namaBarang, urlBarang, deskripsiBarang, setIdBarang, setNamaBarang, setUrlBarang, setDeskripsiBarang,
-        modalTambahAkun, setModalTambahAkun, modalHapusAkun, setModalHapusAkun, setModalEditAkun, modalEditAkun
+        modalTambahAkun, setModalTambahAkun, modalHapusAkun, setModalHapusAkun, setModalEditAkun, modalEditAkun,
+        nama, nim, role, email, password, urlFoto, setNama, setNim, setRole, setEmail, setPassword, setUrlFoto,
+        idUser, setIdUser, setAuthority
     }
 }, {
     persist: true
